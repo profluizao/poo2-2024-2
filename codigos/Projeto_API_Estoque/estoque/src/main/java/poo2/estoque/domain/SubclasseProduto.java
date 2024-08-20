@@ -2,6 +2,9 @@ package poo2.estoque.domain;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class SubclasseProduto extends BaseIdentificador {
     private Long codigoClasse;
 

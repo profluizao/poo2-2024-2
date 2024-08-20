@@ -2,6 +2,9 @@ package poo2.estoque.fakedb;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class BaseFakeDB<TDominio> {
     protected ArrayList<TDominio> lista;
 

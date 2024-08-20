@@ -2,9 +2,12 @@ package poo2.estoque.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import poo2.estoque.domain.ClasseProduto;
 import poo2.estoque.repository.ClasseProdutoRepositorio;
 
+@Service
 public class ClasseProdutoServico extends 
     BaseServico<ClasseProdutoRepositorio, ClasseProduto>{
 

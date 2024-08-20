@@ -2,7 +2,12 @@ package poo2.estoque.domain;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class BaseIdentificador {
+    @Id
     private Long codigo;
     private String descricao;
     private LocalDate dataInclusao;
