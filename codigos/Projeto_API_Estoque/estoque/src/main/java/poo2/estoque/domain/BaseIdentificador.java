@@ -8,32 +8,33 @@ import jakarta.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class BaseIdentificador {
     @Id
-    private Long codigo;
-    private String descricao;
-    private LocalDate dataInclusao;
+    protected Long codigo;
+    protected LocalDate dataDeInclusao;
+    protected LocalDate dataDeAlteracao;
     public Long getCodigo() {
         return codigo;
     }
     public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
-    public String getDescricao() {
-        return descricao;
+    public LocalDate getDataDeInclusao() {
+        return dataDeInclusao;
     }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDataDeInclusao(LocalDate dataDeInclusao) {
+        this.dataDeInclusao = dataDeInclusao;
     }
-    public LocalDate getDataInclusao() {
-        return dataInclusao;
+    public LocalDate getDataDeAlteracao() {
+        return dataDeAlteracao;
     }
-    public void setDataInclusao(LocalDate dataInclusao) {
-        this.dataInclusao = dataInclusao;
+    public void setDataDeAlteracao(LocalDate dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
     }
     public BaseIdentificador() {
     }
-    public BaseIdentificador(Long codigo, String descricao, LocalDate dataInclusao) {
+    public BaseIdentificador(Long codigo, LocalDate dataDeInclusao, LocalDate dataDeAlteracao) {
         this.codigo = codigo;
-        this.descricao = descricao;
-        this.dataInclusao = dataInclusao;
+        this.dataDeInclusao = dataDeInclusao;
+        this.dataDeAlteracao = dataDeAlteracao;
     }
+
 }

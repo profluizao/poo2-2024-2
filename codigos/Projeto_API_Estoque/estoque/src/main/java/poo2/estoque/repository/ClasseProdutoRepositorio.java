@@ -1,5 +1,7 @@
 package poo2.estoque.repository;
 
+import java.time.LocalDate;
+
 import poo2.estoque.domain.ClasseProduto;
 import poo2.estoque.fakedb.ClasseProdutoFakeDB;
 
@@ -33,6 +35,7 @@ public class ClasseProdutoRepositorio extends BaseRepositorio<ClasseProduto> {
         ClasseProduto p = this.Read(instancia.getCodigo());
         if (p != null) {
             p.setDescricao(instancia.getDescricao());
+            p.setDataDeAlteracao(LocalDate.now());
             return p;
         }
         else {

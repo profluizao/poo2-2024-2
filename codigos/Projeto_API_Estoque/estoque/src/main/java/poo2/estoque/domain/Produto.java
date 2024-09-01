@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import jakarta.persistence.Entity;
 
 @Entity
-public class Produto extends BaseIdentificador {
+public class Produto extends BaseParametro {
     private Long codigoSubclasse;
     private Double valor;
     public Long getCodigoSubclasse() {
@@ -23,9 +23,11 @@ public class Produto extends BaseIdentificador {
     public Produto() {
         super();
     }
-    public Produto(Long codigo, String descricao, LocalDate dataInclusao, Long codigoSubclasse, Double valor) {
-        super(codigo, descricao, dataInclusao);
+    public Produto(Long codigo, LocalDate dataDeInclusao, LocalDate dataDeAlteracao, String descricao,
+            Long codigoSubclasse, Double valor) {
+        super(codigo, dataDeInclusao, dataDeAlteracao, descricao);
         this.codigoSubclasse = codigoSubclasse;
         this.valor = valor;
     }
+
 }

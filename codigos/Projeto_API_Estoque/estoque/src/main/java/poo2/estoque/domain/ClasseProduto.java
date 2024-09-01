@@ -5,12 +5,13 @@ import java.time.LocalDate;
 import jakarta.persistence.Entity;
 
 @Entity
-public class ClasseProduto extends BaseIdentificador {
+public class ClasseProduto extends BaseParametro {
     public ClasseProduto(){
         super();
     }
 
-    public ClasseProduto(Long codigo, String descricao, LocalDate dataInclusao){
-        super(codigo, descricao, dataInclusao);
+    public ClasseProduto(Long codigo, LocalDate dataDeInclusao, LocalDate dataDeAlteracao, String descricao){
+        super(codigo, dataDeInclusao, dataDeAlteracao, descricao);        
     }
+
 }
